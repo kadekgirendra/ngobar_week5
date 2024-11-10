@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	scroll-behavior: smooth;
+}
+
+.container {
+	max-width: 1080px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.navigation__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30px 0;
+}
+
+.navigation__title > h3 {
+	font-weight: 700;
+	letter-spacing: -1px;
+	font-size: 36px;
+	text-transform: uppercase;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+.navigation__menus > a {
+	margin: 0 20px;
+	font-weight: 400;
+	font-size: 20px;
+	display: none;
+
+	transition: all 0.3s ease-in-out;
+}
+
+.navigation__action a.navigation__button {
+	padding: 14px 40px;
+	font-size: 16px;
+	border-radius: 12px;
+	font-weight: 500;
+	border: 2px solid #000;
+	display: none;
+}
+
+/* Pada minggu keempat, ditambahkan sidebar sebagai pengganti navbar
+   pada tampilan mobile
+*/
+aside {
+	position: fixed;
+	display: block;
+	top: 0;
+	padding: 24px 30px;
+	height: 100%;
+	width: 200px;
+	background-color: whitesmoke;
+	border-left: 1px solid black;
+}
+
+.sidebar-show {
+	right: 0;
+}
+
+.sidebar-hide {
+	right: -100%;
+}
+
+aside a {
+	display: block;
+	padding: 8px 16px;
+	margin-bottom: 16px;
+}
+
+.navigation__menus > a:hover {
+	color: rgb(154, 154, 154);
+}
+
+.content__article {
+	padding-top: 20px;
+}
+
+#main_text {
+	font-size: 30px;
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: -1px;
+	margin-bottom: 20px;
+	text-transform: capitalize;
+}
+
+#main_text > span {
+	color: rgb(154, 154, 154);
+}
+
+.content__banner {
+	display: relative;
+	height: 360px;
+	min-width: 320px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.content__banner > img {
+	object-fit: cover;
+	border-radius: 14px;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.content__information {
+	display: flex;
+	padding: 20px 0;
+	margin-top: 10px;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.content__item__value {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.content__item__value > div {
+	padding: 8px 16px;
+}
+
+.content__item__value h3 {
+	font-size: 40px;
+	color: black;
+	font-weight: 600;
+}
+
+.content__item__value p {
+	font-size: 20px;
+	color: black;
+	font-weight: 400;
+}
+
+.content__item__information {
+	flex: 1;
+	display: block;
+}
+
+.content__item__information > p {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.content__item__side {
+	display: flex;
+	margin-top: 14px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.content__item__side > img {
+	width: 100px;
+}
+
+.content__item__button {
+	background: #f8a401;
+	padding: 12px 30px;
+	border: none;
+	border-radius: 14px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: capitalize;
+	transition: all 0.3s ease-in-out;
+}
+
+.content__item__button:hover {
+	opacity: 0.8;
+}
+
+@media only screen and (min-width: 1024px) {
+	#main_text {
+		font-size: 70px;
+	}
+	.content__information {
+		flex-direction: row;
+		gap: 40px;
+	}
+	
+	.content__item__value > div {
+		padding: 4px 8px;
+	}
+	
+	.content__item__value h3 {
+		font-size: 50px;
+	}
+	
+	.content__item__value p {
+		font-size: 20px;
+	}
+
+	.navigation__menus > a {
+		display: inline;
+	}
+	
+	.navigation__action a.navigation__button {
+		display:block ;
+	}
+	
+	#open {
+		display: none;
+	}
+}
